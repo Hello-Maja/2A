@@ -3,6 +3,9 @@ source :rubygems
 # SQLite3 driver
 gem 'sqlite3'
 
+# Security
+gem 'bcrypt-ruby', '~> 3.0.0'
+
 # Sinatra driver
 gem 'sinatra'
 gem 'sinatra-contrib'

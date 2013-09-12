@@ -1,0 +1,34 @@
+
+<div id='profile'>
+  <h1>Profile: <%=current_user.first_name%> <%=current_user.first_name%>'s Profile</h1>
+  <h3><%=current_user.email%></h3>
+  <h3>Account Created: <%=((Time.now - current_user.created_at) / 86400).floor%> days ago</h3>
+<br>
+
+<div class='profile-tables'>
+<table id="user-created">
+  <tr>
+  <th>Make</th>
+  <tbody class = "created">
+    <% @created_events.each do |event| %>
+      <tr>
+        <td><a href="/made_event/<%=event.event_id %>"><%=event.name %></a>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<table id='user_attended'>
+  <tr>
+    <th>Go</th>
+  <tbody class = "comment">
+    <% @attended_events.each do |event| %>
+      <tr>
+        <td><a href="/attended_event/<%=event.event_id %>"><%=event.name %></a>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+  </div>
+</div>

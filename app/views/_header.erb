@@ -1,0 +1,16 @@
+<!-- 	<a href="/">Header</a> -->
+<ul>  
+    <% if logged_in? %>
+    
+    <li><a href="/user/profile"><%=current_user.email %></a></li>	
+    <li><a href="/create_event">Create Event</a>
+    <li><a href="/all_attendedevents">View All Your Upcoming Events</a></li>
+    <li><a href="/all_createdevents">View Events You've Created</a></li>
+    <li><a href="/logout">Logout</a></li>
+
+	  <% else %>
+	    <li><a href="/login">Login</a></li>
+	    <li><a  href="/create_user">Sign Up</a></li>
+	  <% end %>
+</ul>
+
